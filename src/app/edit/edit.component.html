@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div align="center"><h1 >Edit A Product</h1>
+    <div class="wrapper">
+        <div class="cotainer col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 style="text-align: center;"></h3>
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr class="text-center">
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Cost</th>
+                                    <th>Amount</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of ItemsArray" style=" text-align: center;">
+                                    <th>{{ item._id }}</th>
+                                    <td>{{ item.name }}</td>
+                                    <td>{{ item.cost }}</td>
+                                    <td>{{ item.amount}}</td>
+                                <td>
+                                    <button (click)="Edit( item )" class="btn btn-warning btn-sm">E</button>
+                                </td>
+                                <td><button (click)="Delete( item._id )" class="btn btn-danger btn-sm" style="margin-left: 10px;">D</button>
+                                </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

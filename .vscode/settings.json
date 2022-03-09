@@ -1,0 +1,4 @@
+{
+    "appService.deploySubpath": ".",
+    "appService.defaultWebAppToDeploy": "/subscriptions/51853c09-5346-44f4-8952-b76d072401a3/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/ATI-Angular"
+}

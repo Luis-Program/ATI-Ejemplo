@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <br>
+    <div align="center"><h1 >Edit A Product</h1></div>
+
+    <br>
+    <div class="container">
+      <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+        <div class="form-group">
+          <div class="form-control">
+          <span style="line-height: 0cm; white-space: inherit;" for="01">ID:</span>
+          <br>
+          <label style="line-height: 0cm; white-space: inherit;" for="Id modified" > {{ productos._id }} </label>
+          <br>
+          <small id="emailHelp" class="form-text text-muted">The ID.</small></div>
+        </div>
+        <div class="form-control">
+            <label for="exampleInputEmail1">Name</label>
+            <input type="text" class="form-control" id="NameProduct" [(ngModel)]="productos.name" name="name" value="{{ productos.name }}"  aria-describedby="emailHelp" placeholder="Enter Name">
+            <small id="emailHelp" class="form-text text-muted">Enter a name without numbers.</small>
+          </div>
+          <div class="form-control">
+            <label for="exampleInputEmail1">Cost</label>
+            <input type="number" class="form-control" id="CostProduct" [(ngModel)]="productos.cost" name="Cost" value="{{ productos.cost }}"   placeholder="Enter Cost">
+            <small id="emailHelp" class="form-text text-muted">This cost will show to customers.</small>
+          </div>
+          <div class="form-control">
+            <label for="exampleInputEmail1">Amount</label>
+            <input type="number" class="form-control" id="AmountProduct" aria-describedby="emailHelp" [(ngModel)]="productos.amount" name="amount" value="{{ productos.amount }}"  placeholder="Enter Cost">
+            <small id="emailHelp" class="form-text text-muted">This amount will show to customers.</small>
+          </div>
+
+
+        <button type="submit" class="btn btn-primary">Save</button>
+      </form>
+    </div>
+
+</body>
+</html>

@@ -53,4 +53,4 @@ jobs:
           app-name: 'ATI-App-Angular'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CA24C56AFA9D44BFA9D157425D0A2F6F }}
-          package: .
+          package: ./dist/ATI-Ejemplo
